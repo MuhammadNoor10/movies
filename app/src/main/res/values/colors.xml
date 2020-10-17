@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF9800</color>
+
+    <!--Standard Colors-->
+    <color name="colorWhite">#FFF</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorGreen">#28D64E</color>
+    <color name="colorBlue">#2B9CDB</color>
+    <color name="colorDarkGrey">#777</color>
+    <color name="colorLightGrey">#80CCCCCC</color>
+    <color name="colorPurple">#7F1999</color>
+    <color name="colorDarkRed">#E15050</color>
+
+    <!--Text colors-->
+    <color name="textColorPrimary">#444444</color>
+    <color name="textColorLight">#777777</color>
+    <color name="textColorWhite">@color/colorWhite</color>
+    <color name="textColorHint">@color/colorDisabled</color>
+    <color name="textColorAccent">@color/colorBlue</color>
+
+    <!--background colors-->
+    <color name="colorBgLightGrey">#F6F6F6</color>
+    <color name="colorBgDarkGrey">#777777</color>
+    <color name="colorBgWhite">@color/colorWhite</color>
+    <color name="colorBgGreen">@color/colorGreen</color>
+    <color name="colorBgBlue">@color/colorBlue</color>
+
+    <!--GREY SHADES-->
+    <color name="charcoal_100">#4A4A4A</color>
+    <color name="charcoal_80">#6E6E6E</color>
+    <color name="charcoal_60">#929292</color>
+    <color name="charcoal_40">#B7B7B7</color>
+    <color name="charcoal_20">#DBDBDB</color>
+    <color name="charcoal_10">#ECECEC</color>
+    <color name="charcoal_5">#F6F6F6</color>
+
+    <!--Others-->
+    <color name="colorDisabled">#CCCCCC</color>
+    <color name="colorSeparator">@color/colorDisabled</color>
+</resources>
