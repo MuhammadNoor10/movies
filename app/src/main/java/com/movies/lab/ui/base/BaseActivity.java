@@ -12,6 +12,10 @@ import dagger.android.support.DaggerAppCompatActivity;
 
 public class BaseActivity extends DaggerAppCompatActivity {
 
+    /**
+     * having progressDialog at base activity help to reduce code in child activities.
+     * but i'm initializing the context of each child activity cause it's on top of other activities.
+     */
     protected MyProgressDialog progressDialog;
 
     @Override

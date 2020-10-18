@@ -83,10 +83,14 @@ public class MovieListActivity extends BaseActivity {
         });
     }
 
+    //Recycler callback
     private void onEventOccur(RecyclerEventType recyclerEventType, int position, Object object) {
         viewModel.getMovieDetail(((Movie)object).getId());
     }
 
+    /**
+     * get movie api callback. Get detail and pass it on to next MovieListDetail Activity
+     */
     private void getMovieDetailStateUpdate(UIDataState state) {
         if (state.isLoading()) {
                 showProgressDialog(binding.getRoot().getContext());
@@ -104,6 +108,9 @@ public class MovieListActivity extends BaseActivity {
         }
     }
 
+    /**
+     * get moves api callback.
+     */
     private void getMoviesStateUpdate(UIDataState state) {
         if (state.isLoading()) {
             if (currentPage == 1) {
@@ -139,6 +146,9 @@ public class MovieListActivity extends BaseActivity {
         viewModel.getMovies(currentPage);
     }
 
+    /**
+     * upon refresh mush reset pagination. So the pagination will act as new
+     */
     private void resetPagination() {
         currentPage = PaginationListener.PAGE_START;
         isLastPage = false;

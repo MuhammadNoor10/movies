@@ -8,6 +8,7 @@ import com.movies.lab.R;
 
 /**
  * Created by Noor aka Thor.
+ * custom loading progress dialog
  */
 public class MyProgressDialog {
 

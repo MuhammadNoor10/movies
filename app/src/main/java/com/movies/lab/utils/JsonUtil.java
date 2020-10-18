@@ -14,6 +14,7 @@ import java.util.List;
 
 /**
  * Created by Noor aka Thor on 2020-04-11.
+ * this util class is made by me to parse json arrays, objects into model classes or to get any value from jsonObject
  */
 public class JsonUtil {
 
@@ -125,7 +126,7 @@ public class JsonUtil {
     }
 
     /**
-     * @param jsonElement directly from ResponseBody. It should have a jsonObject but i'm also check might be it have jsonArray
+     * @param jsonElement directly from ResponseBody. It should have a jsonObject but i'm also checking might be it have jsonArray
      * @param key key of value to extract
      * @return JsonElement value
      */

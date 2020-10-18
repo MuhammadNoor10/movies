@@ -12,9 +12,15 @@ import com.movies.lab.R;
 import com.movies.lab.databinding.ActivityMovieDetailBinding;
 import com.movies.lab.ui.base.BaseActivity;
 import com.movies.lab.ui.movie.model.Movie;
+import com.movies.lab.widgets.MyToast;
+
+import javax.inject.Inject;
 
 public class MovieDetailActivity extends BaseActivity {
     private static final String ARGS_MOVIE = "ARGS_MOVIE";
+
+    @Inject
+    MyToast toast;
 
     private ActivityMovieDetailBinding binding;
     private Movie movie;
@@ -32,13 +38,19 @@ public class MovieDetailActivity extends BaseActivity {
         initToolbar();
         movie = (Movie) getIntent().getSerializableExtra(ARGS_MOVIE);
         if (movie != null) {
-            binding.setMovie(movie);
+            binding.setMovie(movie); //data binding
             Glide.with(this).load(movie.getPosterPath()).placeholder(R.drawable.poster_placeholder).into(binding.ivPoster);
             Glide.with(this).load(movie.getBackdropPath()).placeholder(R.color.colorBlack).into(binding.ivLandscape);
             initGenreAdapter();
+        } else { //in worst case failed to get movie object from intent
+            toast.setTextAndShow("Failed to load data. Please try again");
+            onBackPressed();
         }
     }
 
+    /**
+     * this genre adapter is using google flexbox lib. which enable to have a free style dynamic per row or column item limitation
+     */
     private void initGenreAdapter() {
         GenreAdapter genreAdapter = new GenreAdapter(movie.getGenres());
         FlexboxLayoutManager layoutManager = new FlexboxLayoutManager(this);
